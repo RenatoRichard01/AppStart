@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form #f="ngForm" (submit)="sendForm(f)">
+  
+  <div class="ion-padding">
+    <ion-label position="stacked" color="primary">
+      Envie-nos seu feedback, duvidas ou sugestoes
+    </ion-label>
+    <ion-textarea name="messageField" rows="4" [(ngModel)]="messageField" class="textArea"></ion-textarea>
+  </div>
+
+  <div class="ion-padding">
+    <ion-label position="stacked" color="primary">Informação de contato:</ion-label>
+    <ion-label name="contactField" type="text" [(ngModel)]="contactField"></ion-label>
+  </div>
+
+  <div class="ion-padding">
+    <ion-button type="submit" expand="block" name="buttonLogin">
+      Enviar
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
+</form>
+</ion-content>
